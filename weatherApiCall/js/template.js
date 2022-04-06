@@ -14,13 +14,13 @@ var API_TEMPLATE = {
             "Dust": "/images/dust.jpg",
         }
 
-        var temp = data.main.temp - 273.15;
+        var temp = data.main.temp - 273.15;  //Conversion from Kelvin to Celsius
 
         var weather = data.weather[0].main;
 
-        var visibility = data.visibility / 1000;
+        var visibility = data.visibility / 1000; //Conversion of visibility from m to km
 
-        var feels_like = data.main.feels_like - 273.15;
+        var feels_like = data.main.feels_like - 273.15;  
 
         var date = new Date((data.dt)*1000).toLocaleDateString("en-IN");
 
